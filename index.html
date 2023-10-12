@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrador César</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #F5F5F5;
+        }
+        .card {
+            background-color: #FFFFFF;
+            border: 2px solid #E0E0E0;
+        }
+        .card-title {
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center" style="color: #333333;">Cifrador César</h1>
+        <div class="row">
+            <!-- Tarjeta para cifrar -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cifrar Mensaje</h5>
+                        <div class="form-group">
+                            <label for="mensajeCifrar">Texto a cifrar:</label>
+                            <input type="text" class="form-control" id="mensaje" placeholder="Ingresa el mensaje">
+                        </div>
+                        <button class="btn btn-primary" onclick="cifrarMensaje()">
+                            <span class="fas fa-lock" style="color: #333333;"></span> Cifrar
+                        </button>
+                        <div class="form-group mt-3">
+                            <label for="mensajeCifrado">Mensaje cifrado:</label>
+                            <input type="text" class="form-control" id="resultado" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta para descifrar -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Descifrar Mensaje</h5>
+                        <div class="form-group">
+                            <label for="mensajeDescifrar">Texto a descifrar:</label>
+                            <input type="text" class="form-control" id="mensajeCifrar" placeholder="Ingresa el mensaje cifrado">
+                        </div>
+                        <button class="btn btn-secondary" onclick="descifrarMensaje()">
+                            <span class="fas fa-unlock-alt" style="color: #333333;"></span> Descifrar
+                        </button>
+                        <div class="form-group mt-3">
+                            <label for="mensajeDescifrado">Mensaje descifrado:</label>
+                            <input type="text" class="form-control" id="resultadoCifrar" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
